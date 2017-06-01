@@ -1,0 +1,40 @@
+
+<header class="intro-header" style="background-image: url('img/league.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <!--<h2>{{tituloForum}}</h2>-->
+                    <!--<hr class="small">-->
+                    <!--<span class="subheading">Game Forum</span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p class="text-center" ng-show="loading"><span class="fa fa-spinner fa-3x fa-spin"></span></p>
+
+            <div class="post-preview" dir-paginate="post in posts|itemsPerPage:5">
+                <h2 class="post-title">
+                    <a ng-click="getPosts(post)" href="#">{{ post.title }}</a>
+                </h2>
+                <div ng-show="post.body != undefined">
+                    <ul class="list-unstyled post-categories">
+                        <li >{{ post.body }}</li>
+                    </ul>
+                </div>
+                <p class="post-subtitle" ></p>
+                <p class="post-meta">Postado por <a >{{post.user.name}}</a> do Website {{post.user.website}}</p>
+            </div>
+            <hr>
+            <dir-pagination-controls boundary-links="false"></dir-pagination-controls>
+
+            <h3 ng-show="noResult" class="text-center">NO POSTS FOUND</h3>
+        </div>
+    </div>
+</div>

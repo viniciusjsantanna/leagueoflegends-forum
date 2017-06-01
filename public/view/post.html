@@ -1,0 +1,48 @@
+<header class="intro-header" style="background-image: url('img/lol.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <!--<h2>Posts</h2>
+                    <hr class="small">
+                    <span class="subheading"></span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div>
+	<h1 class="text-center">{{post.title}}</h1>
+	<div class="container">
+		<p>{{post.body}}</p>
+        <p class="post-subtitle" ></p>
+        <p class="post-meta">Postado por <a href="#">{{post.user.name}}</a> do Website {{post.user.website}}</p>
+        <button class="btn btn-defult col-lg-offset-5 col-lg-2" ng-click="backHome()">Voltar</button>
+	</div>
+    <hr>
+    <div class="container">
+        <h2>Comentarios</h2>
+        <ol>
+            <li dir-paginate="comment in comments|itemsPerPage:5">
+                <div>
+                    <cite>{{comment.name}}</cite> - 
+                    <cite>{{comment.email}}</cite>
+                </div>
+                <p>{{comment.body}}</p>
+            </li>
+        </ol>
+        <dir-pagination-controls boundary-links="false"></dir-pagination-controls>
+    </div>
+    <hr>
+   <div class="container">
+        <span style="font-size: 14px; color: blue;" ng-if="!logado">Autentique-se para comentar</span>
+   </div>
+    <div class="container">
+        
+        <textarea name="" id="" cols="50" rows="4" ng-model="comment.body" placeholder="Digite seu comentario aqui!"></textarea>    <br>
+        <button class="btn btn-primary" ng-click="createComment(comment)" ng-disabled="!logado">Comentar</button>
+        <button class="btn btn-default" ng-click="backHome()">Voltar</button>
+    </div>
+   <hr>
+</div>

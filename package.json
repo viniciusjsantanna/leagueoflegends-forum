@@ -1,0 +1,30 @@
+{
+  "name": "greenhouse",
+  "version": "1.0.0",
+  "description": "This is an example of MEAN application where you can add cute plants for a virtual plant store",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoshmendes/greenhouse.git"
+  },
+  "keywords": [
+    "greenhouse",
+    "mean",
+    "mhmendes"
+  ],
+  "author": "Marcos H Mendes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcoshmendes/greenhouse/issues"
+  },
+  "homepage": "https://github.com/marcoshmendes/greenhouse#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11",
+    "morgan": "^1.7.0"
+  }
+}

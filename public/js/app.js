@@ -1,0 +1,1 @@
+angular.module('LeagueofLegends', ['ngRoute','angularUtils.directives.dirPagination']);
